@@ -39,36 +39,67 @@
 					<a href="#"><i class="fa fa-bars"></i></a>
                 </button>
                 <a class="navbar-brand" href="#page-top">
-                    <i class="fa fa-play-circle"></i>  <span class="light">TCS Charlotte Lab</span>
+                    <i class="fa fa-play-circle"></i>  <span class="light">CLT Lab</span>
                 </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav" style="font-size:0.75em">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li class="page-scroll" style="font-size:1em">
-							<a href="#reservation" onclick="$('#reservation').removeClass('hidden').addClass('visible');"><center><i class="glyphicon glyphicon-calendar"></i></center>My Reservations</a>
-                    </li>
-                    <li class="page-scroll" style="font-size:1em">
-                        <a href="#about"><center><i class="glyphicon glyphicon-info-sign"></i></center>About</a>
-                    </li>
-					<li class="page-scroll" style="font-size:1em">
-                        <a href="#contact"><center><i class="glyphicon glyphicon-envelope"></i></center>Contact Us</a>
-                    </li>
-					<li class="page-scroll" style="font-size:1em">
-					<a href="#contact"><center><i class="glyphicon glyphicon-log-out"></i></center>Logout</a>
-					</li>
-                </ul>
-				<form class="navbar-form navbar-left" role="search">
-				<div class="form-group">
-				  <input type="text" class="form-control" placeholder="Search">
+            <div class="hidden-xs">
+				<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+					<ul class="nav navbar-nav" style="font-size:0.75em">
+						<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+						<li class="hidden">
+							<a href="#page-top"></a>
+						</li>
+						<li class="page-scroll" style="font-size:1em; text-align:left">
+								<a href="#reservation" onclick="$('#reservation').removeClass('hidden').addClass('visible');"><center><i class="glyphicon glyphicon-calendar"></i></center>My Reservations</a>
+						</li>
+						<li class="page-scroll" style="font-size:1em; text-align:left">
+							<a href="#about"><center><i class="glyphicon glyphicon-info-sign"></i></center>About</a>
+						</li>
+						<li class="page-scroll" style="font-size:1em; text-align:left">
+							<a href="#contact"><center><i class="glyphicon glyphicon-envelope"></i></center>Contact Us</a>
+						</li>
+						<li class="page-scroll" style="font-size:1em; text-align:left">
+						<a href="#contact"><center><i class="glyphicon glyphicon-log-out"></i></center>Logout</a>
+						</li>
+					</ul>
+					<form class="navbar-form navbar-left" role="search">
+					<div class="form-group">
+					  <input type="text" class="form-control" placeholder="Search" style="text-align:center">
+					</div>
+				  </form>
 				</div>
-			  </form>
-            </div>
+			</div>
+			
+			<div class="visible-xs">
+				<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+					<ul class="nav navbar-nav" style="font-size:0.75em">
+						<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+						<li class="hidden">
+							<a href="#page-top"></a>
+						</li>
+						<li class="page-scroll" style="font-size:1em; text-align:left">
+								<a href="#reservation" onclick="$('#reservation').removeClass('hidden').addClass('visible');"><center><i class="glyphicon glyphicon-calendar" style="float:right"></i></center>My Reservations</a>
+						</li>
+						<li class="page-scroll" style="font-size:1em; text-align:left">
+							<a href="#about"><center><i class="glyphicon glyphicon-info-sign" style="float:right"></i></center>About</a>
+						</li>
+						<li class="page-scroll" style="font-size:1em; text-align:left">
+							<a href="#contact"><center><i class="glyphicon glyphicon-envelope" style="float:right"></i></center>Contact Us</a>
+						</li>
+						<li class="page-scroll" style="font-size:1em; text-align:left">
+						<a href="#contact"><center><i class="glyphicon glyphicon-log-out" style="float:right"></i></center>Logout</a>
+						</li>
+					</ul>
+					<form class="navbar-form navbar-left" role="search">
+					<div class="form-group">
+					  <input type="text" class="form-control" placeholder="Search" style="text-align:center">
+					</div>
+				  </form>
+				</div>
+			</div>
+			
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
@@ -76,13 +107,13 @@
 
     <section class="intro">
         <div class="intro-body">
-            <div class="container">
+            <div class="container" style="padding-top:100px">
 			<div class = "page-header">
 					<h3>Pick Your Workstation To Reserve</h3>
             </div>
                 <div class="row">
                         <!--<h1 class="brand-heading">L A B</h1>-->
-					<div class="btn-group page-scroll">
+					<div class="btn-group page-scroll visible-lg visible-md">
 						<div class="col-md-12 col-md-offset-0" style="padding-bottom:50px">	
 							<div class="col-md-2 col-md-offset-1">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
@@ -148,6 +179,57 @@
 							</div>
 						</div>
 					</div>
+					
+					<div class="btn-group page-scroll hidden-lg hidden-md">
+						<div class="col-md-12 col-md-offset-0" style="padding-bottom:50px">	
+							<div class="col-md-2 col-md-offset-1">
+								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
+										<a href="#timeslot">
+										<button type="button" id="workstation1" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 1</button></i>
+										</a>
+								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
+									<a href="#timeslot">
+									<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 2</button></i>
+									</a>
+								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
+									<a href="#timeslot">
+									<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 3</button></i>
+									</a>
+									<i class="glyphicon glyphicon-hdd" style="font-size:2em">
+									<a href="#timeslot">
+										<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 4</button></i>
+									</a>
+								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
+									<a href="#timeslot">
+									<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 5</button></i>
+									</a>
+								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
+									<a href="#timeslot">
+									<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 6</button></i>
+									</a>
+								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
+									<a href="#timeslot">
+									<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 7</button></i>
+									</a>
+							<i class="glyphicon glyphicon-hdd" style="font-size:2em">
+								<a href="#timeslot">
+								<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 8</button></i>
+								</a>
+								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
+									<a href="#timeslot">
+									<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 9</button></i>
+									</a>
+
+								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
+									<a href="#timeslot">
+									<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); ">PC 10</button></i>
+									</a>
+						</div>
+					</div>
+					
+					
+					
+					
 						</div>
                         <p class="intro-text" hidden>Grayscale is a premium quality, free Bootstrap 3 theme</p>								
                     </div>
@@ -159,13 +241,11 @@
     <section id="timeslot" class="container content-section text-center hidden">
 		<div class = "container">
                      <div class = "row">                  
-                        <div class = "col-lg-12  page-scroll">
+                        <div class = "col-lg-12 col-xs-12 col-sm-12 col-md-12  page-scroll">
                             <div class = "panel panel-default">
                            
                                 <div class = "panel-body">
-                                   
-                                    <div class = "page-header">
-																	
+                                    <div class = "page-header">	
                                         <h3><font color="black">Pick Your Timeslot</font></h3>
                                     </div>
 									<p> <font color="black">Please use the dropdown below to choose the date you would like to reserve your workstation.
@@ -190,7 +270,7 @@
 											</tr>
 										</table>
 									</div>
-									<div class="table-responsive">
+									<div class="table-responsive hidden-xs">
 										<table class="table table-hover table-striped">
 											<h4><caption>Available Times</caption></h4>
 											<th colspan=6>
@@ -200,33 +280,41 @@
 												<td><button type="button" class="btn btn-success btn-md">8:00am-9:00am</button></td>
 												<td><button type="button" class="btn btn-success">9:00am-10:00am</button></td>
 												<td><button type="button" class="btn btn-danger">11:00am-12:00pm</button></td>
-												<td><button type="button" class="btn btn-success btn-md">1:00pm-2:00pm</button></td>
-												<td><button type="button" class="btn btn-success btn-md">2:00pm-3:00pm</button></td>
-												<td><button type="button" class="btn btn-success btn-md">3:00pm-4:00pm</button></td>
 											</tr>
 											<tr>
 												<td><button type="button" class="btn btn-success btn-md">4:00pm-5:00pm</button></td>
 												<td><button type="button" class="btn btn-danger">5:00pm-6:00pm</button></td>
 												<td><button type="button" class="btn btn-success btn-md">6:00pm-7:00pm</button></td>
-												<td><button type="button" class="btn btn-danger">7:00pm-8:00pm</button></td>
-												<td><button type="button" class="btn btn-success btn-md">8:00pm-9:00pm</button></td>
-												<td><button type="button" class="btn btn-danger">9:00pm-10:00pm</button></td>
 											</tr>
 											<tr>
 												<td><button type="button" class="btn btn-success btn-md">10:00pm-11:00pm</button></td>
 												<td><button type="button" class="btn btn-success btn-md">11:00pm-12:00am</button></td>
 												<td><button type="button" class="btn btn-success btn-md">12:00am-1:00am</button></td>
-												<td><button type="button" class="btn btn-danger">1:00am-2:00am</button></td>
-												<td><button type="button" class="btn btn-danger">2:00am-3:00am</button></td>
-												<td><button type="button" class="btn btn-danger">3:00am-4:00am</button></td>
 											</tr>
 											<tr>
 												<td><button type="button" class="btn btn-success btn-md">4:00am-5:00am</button></td>
 												<td><button type="button" class="btn btn-danger">5:00am-6:00am</button></td>
 												<td><button type="button" class="btn btn-success btn-md">6:00am-7:00am</button></td>
-												<td><button type="button" class="btn btn-danger">7:00am-8:00am</button></td>
-												<td></td>
-												<td></td>
+											</tr>
+										</table>
+									</div>
+									<div class="table-responsive visible-xs">
+										<table class="table table-hover table-striped">
+											<h4><caption>Available Times</caption></h4>
+											<th colspan=1>
+												<center>Times</center>
+											</th>
+											<tr>
+												<td><button type="button" class="btn btn-success btn-md">8:00am-9:00am</button></td>
+											</tr>
+											<tr>
+												<td><button type="button" class="btn btn-success btn-md">4:00pm-5:00pm</button></td>
+											</tr>
+											<tr>
+												<td><button type="button" class="btn btn-success btn-md">10:00pm-11:00pm</button></td>
+											</tr>
+											<tr>
+												<td><button type="button" class="btn btn-success btn-md">4:00am-5:00am</button></td>
 											</tr>
 										</table>
 										<a href="#download">
@@ -325,7 +413,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <div class="input-group col-lg-12">
- 					<textarea rows="6" class="form-control col-lg-12" placeholder="Text" maxlength=500></textarea>
+ 					<textarea rows="6" class="form-control col-lg-12" placeholder="Placeholder for about section" maxlength=500></textarea>
  				</div>
             </div>
         </div>
