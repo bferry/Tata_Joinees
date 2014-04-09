@@ -36,7 +36,7 @@
         <div class="container">
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
+					<a href="#"><i class="fa fa-bars"></i></a>
                 </button>
                 <a class="navbar-brand" href="#page-top">
                     <i class="fa fa-play-circle"></i>  <span class="light">TCS Charlotte Lab</span>
@@ -45,20 +45,23 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav" style="font-size:0.75em">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    <li class="page-scroll">
-                        <a href="#page-top"><center><i class="glyphicon glyphicon-list-alt"></i></center>Reserve</a>
+                    <li class="page-scroll" style="font-size:1em">
+							<a href="#reservation" onclick="$('#reservation').removeClass('hidden').addClass('visible');"><center><i class="glyphicon glyphicon-calendar"></i></center>My Reservations</a>
                     </li>
-                    <li class="page-scroll">
-                        <a href="#about"><center><i class="glyphicon glyphicon-calendar"></i></center>My Reservations</a>
+                    <li class="page-scroll" style="font-size:1em">
+                        <a href="#about"><center><i class="glyphicon glyphicon-info-sign"></i></center>About</a>
                     </li>
-                    <li class="page-scroll">
-                        <a href="#download"><center><i class="glyphicon glyphicon-envelope"></i></center>Contact Us</a>
+					<li class="page-scroll" style="font-size:1em">
+                        <a href="#contact"><center><i class="glyphicon glyphicon-envelope"></i></center>Contact Us</a>
                     </li>
+					<li class="page-scroll" style="font-size:1em">
+					<a href="#contact"><center><i class="glyphicon glyphicon-log-out"></i></center>Logout</a>
+					</li>
                 </ul>
 				<form class="navbar-form navbar-left" role="search">
 				<div class="form-group">
@@ -79,68 +82,68 @@
             </div>
                 <div class="row">
                         <!--<h1 class="brand-heading">L A B</h1>-->
-					<div class="btn-group">
+					<div class="btn-group page-scroll">
 						<div class="col-md-12 col-md-offset-0" style="padding-bottom:50px">	
 							<div class="col-md-2 col-md-offset-1">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
-										<a href="#about">
-										<button type="button" id="workstation1" class="btn btn-default btn-md page-scroll" onclick="$('#about').removeClass('hidden').addClass('visible'); $('#workstation1').addClass('selected');">PC 1</button></i>
+										<a href="#timeslot">
+										<button type="button" id="workstation1" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 1</button></i>
 										</a>
 							</div>
 							<div class="col-md-2">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
-									<a href="#about">
-									<button type="button" class="btn btn-default btn-md" onclick="$('#about').removeClass('hidden').addClass('visible');">PC 2</button></i>
+									<a href="#timeslot">
+									<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 2</button></i>
 									</a>
 							</div>
 							<div class="col-md-2">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
-									<a href="#about">
-									<button type="button" class="btn btn-default btn-md" onclick="$('#about').removeClass('hidden').addClass('visible');">PC 3</button></i>
+									<a href="#timeslot">
+									<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 3</button></i>
 									</a>
 							</div>
 							<div class="col-md-2">
 									<i class="glyphicon glyphicon-hdd" style="font-size:2em">
-									<a href="#about">
-										<button type="button" class="btn btn-default btn-md" onclick="$('#about').removeClass('hidden').addClass('visible');">PC 4</button></i>
+									<a href="#timeslot">
+										<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 4</button></i>
 									</a>
 							</div>
 							<div class="col-md-2">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
-									<a href="#about">
-									<button type="button" class="btn btn-default btn-md" onclick="$('#about').removeClass('hidden').addClass('visible');">PC 5</button></i>
+									<a href="#timeslot">
+									<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 5</button></i>
 									</a>
 							</div>
 						</div>
 						<div class="col-md-12 col-md-offset-0">	
 							<div class="col-md-2 col-md-offset-1">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
-									<a href="#about">
-									<button type="button" class="btn btn-default btn-md" onclick="$('#about').removeClass('hidden').addClass('visible');">PC 6</button></i>
+									<a href="#timeslot">
+									<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 6</button></i>
 									</a>
 							</div>
 							<div class="col-md-2">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
-									<a href="#about">
-									<button type="button" class="btn btn-default btn-md" onclick="$('#about').removeClass('hidden').addClass('visible');">PC 7</button></i>
+									<a href="#timeslot">
+									<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 7</button></i>
 									</a>
 							</div>
 							<div class="col-md-2">
 							<i class="glyphicon glyphicon-hdd" style="font-size:2em">
-								<a href="#about">
-								<button type="button" class="btn btn-default btn-md" onclick="$('#about').removeClass('hidden').addClass('visible');">PC 8</button></i>
+								<a href="#timeslot">
+								<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 8</button></i>
 								</a>
 							</div>
 							<div class="col-md-2">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
-									<a href="#about">
-									<button type="button" class="btn btn-default btn-md" onclick="$('#about').removeClass('hidden').addClass('visible');">PC 9</button></i>
+									<a href="#timeslot">
+									<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 9</button></i>
 									</a>
 							</div>
 							<div class="col-md-2">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
-									<a href="#about">
-									<button type="button" class="btn btn-default btn-md" onclick="$('#about').removeClass('hidden').addClass('visible'); ">PC 10</button></i>
+									<a href="#timeslot">
+									<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); ">PC 10</button></i>
 									</a>
 							</div>
 						</div>
@@ -153,10 +156,10 @@
         </div>
     </section>
 
-    <section id="about" class="container content-section text-center hidden">
+    <section id="timeslot" class="container content-section text-center hidden">
 		<div class = "container">
                      <div class = "row">                  
-                        <div class = "col-lg-12">
+                        <div class = "col-lg-12  page-scroll">
                             <div class = "panel panel-default">
                            
                                 <div class = "panel-body">
@@ -230,67 +233,8 @@
 										<button type="button" class="btn btn-default btn-md" onclick="$('#download').removeClass('hidden').addClass('visible'); ">Select Time</button></td>
 										</a>
 									</div>
-									</font></p>                                   
-										<!-- <div class="panel-group" id="accordion">
-										  <div class="panel panel-default">
-											<div class="panel-heading">
-											  <h4 class="panel-title">
-												<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-												  Arvind Radhakrishnen
-												</a>
-											  </h4>
-											</div>
-											<div id="collapseOne" class="panel-collapse collapse">
-											  <div class="panel-body">
-												Reachable via : arvind.kr@tcs.com   or  arvind.k.r@bankofamerica.com
-											  </div>
-											</div>
-										  </div>
-										  <div class="panel panel-default">
-											<div class="panel-heading">
-											  <h4 class="panel-title">
-												<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-												  Somenath Ghosh
-												</a>
-											  </h4>
-											</div>
-											<div id="collapseTwo" class="panel-collapse collapse">
-											  <div class="panel-body">
-												Reachable via : somenath.ghosh@tcs.com   or  somenath.ghosh@bankofamerica.com
-											  </div>
-											</div>
-										  </div>
-										  <div class="panel panel-default">
-											<div class="panel-heading">
-											  <h4 class="panel-title">
-												<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-												  Chandrasekhar Nampally
-												</a>
-											  </h4>
-											</div>
-											<div id="collapseThree" class="panel-collapse collapse">
-											  <div class="panel-body">
-												Reachable via : chandrasekhar.nampally@tcs.com   or  chandrasekhar.nampally@bankofamerica.com
-											  </div>
-											</div>
-										  </div>
-										  
-										  <div class="panel panel-default">
-											<div class="panel-heading">
-											  <h4 class="panel-title">
-												<a data-toggle="collapse" data-parent="#accordion" href="#collapsefour">
-												  Prasun Sharma
-												</a>
-											  </h4>
-											</div>
-											<div id="collapsefour" class="panel-collapse collapse">
-											  <div class="panel-body">
-												Reachable via : prasun.sharma@tcs.com   or  prasun.sharma@bankofamerica.com
-											  </div>
-											</div>
-										  </div>
-										  
-										</div> -->
+									</font></p> 
+									<!-- Old info goes here --> 
                                 </div>
                             </div>
                         </div>
@@ -298,26 +242,96 @@
                 </div>
     </section>
 
-    <section id="download" class="content-section text-center hidden">
-        <div class="download-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-					<div class="panel panel-primary">
-						<!-- Default panel contents -->
-						<div class="panel-heading">Please Enter Your Statement of Purpose</div>
-
-						<!-- Table -->
-						<div class="input-group col-lg-12">
-							<textarea rows="6" class="form-control col-lg-12" placeholder="" maxlength=500></textarea>
-						</div>
-				</div>
-                    <p></p>
-                    <button type="button" class="btn btn-default btn-lg" onclick="$(alert('You have successfully created a reservation!'));">Reserve</button>
+     <section id="reservation" class="container content-section text-center hidden">
+		<div class = "container">
+                     <div class = "row">                  
+                        <div class = "col-lg-12  page-scroll">
+                            <div class = "panel panel-default">
+                                <div class = "panel-body">
+									<p> <font color="black">
+									<div class="table-responsive">
+                                    </div>
+									<p> <font color="black">Please use the dropdown below to choose the date you would like to check your reservations for
+									<div class="table table-hover table-border">
+										<table class="table">
+											<th>
+												<center>Date</center>
+											</th>
+											<tr>
+												<td>
+													<div class="btn-group">
+														<button class="btn btn-default btn-md dropdown-toggle" type="button" data-toggle="dropdown">
+															Choose A Date... <span class="caret"></span>
+														</button>
+														<ul class="dropdown-menu">
+															<li>4/10/2014</li>
+															<li>4/11/2014</li>
+															<li>4/12/2014</li>
+														</ul>
+													</div>
+												</td>
+											</tr>
+										</table>
+									</div>
+										<table class="table table-hover table-striped">
+											<h4><caption>Your Reserved Times</caption></h4>
+											<th colspan=6>
+												<center>Times</center>
+											</th>
+											<tr>
+												<td><button type="button" class="btn btn-success btn-md">8:00am-9:00am</button><i class="glyphicon glyphicon-remove" style="color:red; font-size:1.5em; padding:5px"></i></td>
+												<td><button type="button" class="btn btn-success btn-md">3:00pm-4:00pm</button><i class="glyphicon glyphicon-remove" style="color:red; font-size:1.5em; padding:5px"></i></td>
+												
+											</tr>
+											<tr>
+												<td><button type="button" class="btn btn-success btn-md">4:00pm-5:00pm</button><i class="glyphicon glyphicon-remove" style="color:red; font-size:1.5em; padding:5px"></i></td>
+												<td><button type="button" class="btn btn-success btn-md">9:00pm-10:00pm</button><i class="glyphicon glyphicon-remove" style="color:red; font-size:1.5em; padding:5px"></i></td>
+											</tr>
+											<tr>
+												<td><button type="button" class="btn btn-success btn-md">10:00pm-11:00pm</button><i class="glyphicon glyphicon-remove" style="color:red; font-size:1.5em; padding:5px"></i></td>
+												<td><button type="button" class="btn btn-success btn-md">11:00pm-12:00am</button><i class="glyphicon glyphicon-remove" style="color:red; font-size:1.5em; padding:5px"></i></td>
+											</tr>
+										</table>
+									</div>
+									</font></p>                                   
+                                </div>
+                            </div>
+                        </div>
+                      </div>
                 </div>
+    </section>
+	
+	 <section id="download" class="content-section text-center hidden">
+         <div class="download-section">
+             <div class="container">
+                 <div class="col-lg-8 col-lg-offset-2">
+ 					<div class="panel panel-primary">
+ 						<!-- Default panel contents -->
+ 						<div class="panel-heading">Please Enter Your Statement of Purpose</div>
+ 
+ 						<!-- Table -->
+ 						<div class="input-group col-lg-12">
+ 							<textarea rows="6" class="form-control col-lg-12" placeholder="" maxlength=500></textarea>
+ 						</div>
+ 				</div>
+                     <p></p>
+                     <a onclick="$(alert('You have Successfully Reserved a Time Slot!'))" class="btn btn-default btn-lg">Reserve</a>
+                 </div>
+             </div>
+         </div>
+     </section>
+
+	<section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <div class="input-group col-lg-12">
+ 					<textarea rows="6" class="form-control col-lg-12" placeholder="Text" maxlength=500></textarea>
+ 				</div>
             </div>
         </div>
     </section>
-
+	
+	
     <section id="contact" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
