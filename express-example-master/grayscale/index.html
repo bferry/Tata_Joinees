@@ -20,61 +20,13 @@
     <!-- Custom Theme CSS -->
     <link href="css/grayscale.css" rel="stylesheet">
 	<style>
-	.glyphicon {
-		width: 96px;
-		height: 96px;background-size: 938px 318px;
-		background-position: -624px -48px;
-	} <!-- Workaround for glitch -->
-	@-webkit-keyframes spin {
-    from { -webkit-transform: rotate(0deg); }
-    to { -webkit-transform: rotate(360deg); }
-}
-
-@-moz-keyframes spin {
-    from { -moz-transform: rotate(0deg); }
-    to { -moz-transform: rotate(360deg); }
-}
-
-@-ms-keyframes spin {
-    from { -ms-transform: rotate(0deg); }
-    to { -ms-transform: rotate(360deg); }
-}
-
-#starholder    { 
-    position: relative; 
-    width: 400px; 
-    height: 400px; 
-    margin: 100px 0 0 100px; 
-}
-
-#star    {
-    position: absolute; 
-    top: -100px; 
-    left: -100px; 
-    width: 320px; 
-    height: 320px; 
-    -webkit-animation-name: spin; 
-    -webkit-animation-duration: 12000ms;
-    -webkit-animation-iteration-count: infinite; 
-    -webkit-animation-timing-function: linear;
-    -moz-animation-name: spin; 
-    -moz-animation-duration: 12000ms;
-    -moz-animation-iteration-count: infinite; 
-    -moz-animation-timing-function: linear;
-    -ms-animation-name: spin; 
-    -ms-animation-duration: 12000ms;
-    -ms-animation-iteration-count: infinite; 
-    -ms-animation-timing-function: linear;
-}
+		.glyphicon-hdd {
+			width: 96px;
+			height: 96px;
+			background-size: 938px 318px;
+			background-position: -624px -48px;
+		} 
 	</style>
-	<script>
-	function a_onClick() {
-		document.getElementById("test1").href;
-	}
-	$("#a1").mouseover(function(){
-		document.getElementById("a1").className = "star";
-	})
-	</script>
 
 </head>
 
@@ -84,7 +36,7 @@
         <div class="container">
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars" id="a1"></i>
+                    <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="#page-top">
                     <i class="fa fa-play-circle"></i>  <span class="light">TCS Charlotte Lab</span>
@@ -99,20 +51,19 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#page-top">Workstation</a>
+                        <a href="#page-top"><center><i class="glyphicon glyphicon-list-alt"></i></center>Reserve</a>
                     </li>
                     <li class="page-scroll">
-                        <a id="test1" href="#about">Timeslot</a>
+                        <a href="#about"><center><i class="glyphicon glyphicon-calendar"></i></center>My Reservations</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#download">Purpose</a>
+                        <a href="#download"><center><i class="glyphicon glyphicon-envelope"></i></center>Contact Us</a>
                     </li>
                 </ul>
 				<form class="navbar-form navbar-left" role="search">
 				<div class="form-group">
 				  <input type="text" class="form-control" placeholder="Search">
 				</div>
-				<button type="submit" class="btn btn-default">Submit</button>
 			  </form>
             </div>
             <!-- /.navbar-collapse -->
@@ -132,47 +83,65 @@
 						<div class="col-md-12 col-md-offset-0" style="padding-bottom:50px">	
 							<div class="col-md-2 col-md-offset-1">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
+										<a href="#about">
+										<button type="button" id="workstation1" class="btn btn-default btn-md page-scroll" onclick="$('#about').removeClass('hidden').addClass('visible'); $('#workstation1').addClass('selected');">PC 1</button></i>
+										</a>
+							</div>
+							<div class="col-md-2">
+								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
 									<a href="#about">
-										<button type="button" class="btn btn-default btn-md">PC 1</button></i>
+									<button type="button" class="btn btn-default btn-md" onclick="$('#about').removeClass('hidden').addClass('visible');">PC 2</button></i>
 									</a>
 							</div>
 							<div class="col-md-2">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
-									<button type="button" class="btn btn-default btn-md">PC 2</button></i>
+									<a href="#about">
+									<button type="button" class="btn btn-default btn-md" onclick="$('#about').removeClass('hidden').addClass('visible');">PC 3</button></i>
+									</a>
 							</div>
 							<div class="col-md-2">
 									<i class="glyphicon glyphicon-hdd" style="font-size:2em">
-										<button type="button" class="btn btn-default btn-md">PC 3</button></i>
-							</div>
-							<div class="col-md-2">
-									<i class="glyphicon glyphicon-hdd" style="font-size:2em">
-										<button type="button" class="btn btn-default btn-md">PC 4</button></i>
+									<a href="#about">
+										<button type="button" class="btn btn-default btn-md" onclick="$('#about').removeClass('hidden').addClass('visible');">PC 4</button></i>
+									</a>
 							</div>
 							<div class="col-md-2">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
-									<button type="button" class="btn btn-default btn-md">PC 5</button></i>
+									<a href="#about">
+									<button type="button" class="btn btn-default btn-md" onclick="$('#about').removeClass('hidden').addClass('visible');">PC 5</button></i>
+									</a>
 							</div>
 						</div>
 						<div class="col-md-12 col-md-offset-0">	
 							<div class="col-md-2 col-md-offset-1">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
-									<button type="button" class="btn btn-default btn-md">PC 6</button></i>
+									<a href="#about">
+									<button type="button" class="btn btn-default btn-md" onclick="$('#about').removeClass('hidden').addClass('visible');">PC 6</button></i>
+									</a>
 							</div>
 							<div class="col-md-2">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
-									<button type="button" class="btn btn-default btn-md">PC 7</button></i>
+									<a href="#about">
+									<button type="button" class="btn btn-default btn-md" onclick="$('#about').removeClass('hidden').addClass('visible');">PC 7</button></i>
+									</a>
 							</div>
 							<div class="col-md-2">
 							<i class="glyphicon glyphicon-hdd" style="font-size:2em">
-								<button type="button" class="btn btn-default btn-md">PC 8</button></i>
+								<a href="#about">
+								<button type="button" class="btn btn-default btn-md" onclick="$('#about').removeClass('hidden').addClass('visible');">PC 8</button></i>
+								</a>
 							</div>
 							<div class="col-md-2">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
-									<button type="button" class="btn btn-default btn-md">PC 9</button></i>
+									<a href="#about">
+									<button type="button" class="btn btn-default btn-md" onclick="$('#about').removeClass('hidden').addClass('visible');">PC 9</button></i>
+									</a>
 							</div>
 							<div class="col-md-2">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
-									<button type="button" class="btn btn-default btn-md">PC 10</button></i>
+									<a href="#about">
+									<button type="button" class="btn btn-default btn-md" onclick="$('#about').removeClass('hidden').addClass('visible'); ">PC 10</button></i>
+									</a>
 							</div>
 						</div>
 					</div>
@@ -184,7 +153,7 @@
         </div>
     </section>
 
-    <section id="about" class="container content-section text-center">
+    <section id="about" class="container content-section text-center hidden">
 		<div class = "container">
                      <div class = "row">                  
                         <div class = "col-lg-12">
@@ -257,6 +226,9 @@
 												<td></td>
 											</tr>
 										</table>
+										<a href="#download">
+										<button type="button" class="btn btn-default btn-md" onclick="$('#download').removeClass('hidden').addClass('visible'); ">Select Time</button></td>
+										</a>
 									</div>
 									</font></p>                                   
 										<!-- <div class="panel-group" id="accordion">
@@ -326,7 +298,7 @@
                 </div>
     </section>
 
-    <section id="download" class="content-section text-center">
+    <section id="download" class="content-section text-center hidden">
         <div class="download-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
@@ -340,7 +312,7 @@
 						</div>
 				</div>
                     <p></p>
-                    <a href="http://startbootstrap.com/grayscale" class="btn btn-default btn-lg">Reserve</a>
+                    <button type="button" class="btn btn-default btn-lg" onclick="$(alert('You have successfully created a reservation!'));">Reserve</button>
                 </div>
             </div>
         </div>
