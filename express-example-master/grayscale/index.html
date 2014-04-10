@@ -112,37 +112,38 @@
 					<h3>Pick Your Workstation To Reserve</h3>
             </div>
                 <div class="row">
-                        <input type="text" id="testinput" placeholder="text" value="test"></input>
+                        <input type="hidden" id="testinput" placeholder="text" value="test"></input>
+				<form id="workstationform" name="workstationform" action="/pickworkstation" method="post">
 					<div class="btn-group page-scroll visible-lg visible-md">
 						<div class="col-md-12 col-md-offset-0" style="padding-bottom:50px">	
 							<div class="col-md-2 col-md-offset-1">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
 										<a href="#timeslot">
-										<button type="button" id="workstation" value="workstation1" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); $('#testinput').val('Workstation1');">PC 1</button></i>
+										<button type="submit" id="workstation1" value="workstation1" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); $('#testinput').val(this.value);">PC 1</button></i>
 										</a>
 							</div>
 							<div class="col-md-2">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
 									<a href="#timeslot">
-									<button type="button" id="workstation2" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); $('#testinput').val('workstation2');">PC 2</button></i>
+									<button type="submit" id="workstation2" value="workstation2" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); $('#testinput').val(this.value);">PC 2</button></i>
 									</a>
 							</div>
 							<div class="col-md-2">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
 									<a href="#timeslot">
-									<button type="button" id="workstation3" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); $('#testinput').val('workstation3');">PC 3</button></i>
+									<button type="submit" id="workstation3" value="workstation3" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); $('#testinput').val(this.value);">PC 3</button></i>
 									</a>
 							</div>
 							<div class="col-md-2">
 									<i class="glyphicon glyphicon-hdd" style="font-size:2em">
 									<a href="#timeslot">
-										<button type="button" id="workstation4" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 4</button></i>
+										<button type="submit" id="workstation4" value="workstation4" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); $('#testinput').val(this.value);">PC 4</button></i>
 									</a>
 							</div>
 							<div class="col-md-2">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
 									<a href="#timeslot">
-									<button type="button" id="workstation5" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 5</button></i>
+									<button type="submit" id="workstation5" value="workstation5" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); $('#testinput').val(this.value);">PC 5</button></i>
 									</a>
 							</div>
 						</div>
@@ -150,88 +151,86 @@
 							<div class="col-md-2 col-md-offset-1">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
 									<a href="#timeslot">
-									<button type="button" id="workstation6" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 6</button></i>
+									<button type="submit" id="workstation6" value="workstation6" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); $('#testinput').val(this.value);">PC 6</button></i>
 									</a>
 							</div>
 							<div class="col-md-2">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
 									<a href="#timeslot">
-									<button type="button" id="workstation7" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 7</button></i>
+									<button type="submit" id="workstation7" value="workstation7" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); $('#testinput').val(this.value);">PC 7</button></i>
 									</a>
 							</div>
 							<div class="col-md-2">
 							<i class="glyphicon glyphicon-hdd" style="font-size:2em">
 								<a href="#timeslot">
-								<button type="button" id="workstation8" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 8</button></i>
+								<button type="submit" id="workstation8" value="workstation8" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); $('#testinput').val(this.value);">PC 8</button></i>
 								</a>
 							</div>
 							<div class="col-md-2">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
 									<a href="#timeslot">
-									<button type="button" id="workstation9" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 9</button></i>
+									<button type="submit" id="workstation9" value="workstation9" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); $('#testinput').val(this.value);">PC 9</button></i>
 									</a>
 							</div>
 							<div class="col-md-2">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
 									<a href="#timeslot">
-									<button type="button" id="workstation10" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); ">PC 10</button></i>
+									<button type="submit" id="workstation10" value="workstation10" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); $('#testinput').val(this.value);">PC 10</button></i>
 									</a>
 							</div>
 						</div>
 					</div>
-					
+				
 					<div class="btn-group page-scroll hidden-lg hidden-md">
 						<div class="col-md-12 col-md-offset-0" style="padding-bottom:50px">	
 							<div class="col-md-2 col-md-offset-1">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
 										<a href="#timeslot">
-										<button type="button" id="workstation1" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 1</button></i>
+										<button type="submit" id="workstation11" value="workstation1" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); $('#testinput').val(this.value);">PC 1</button></i>
 										</a>
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
 									<a href="#timeslot">
-									<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 2</button></i>
+									<button type="submit" id="workstation12" value="workstation2" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); $('#testinput').val(this.value);">PC 2</button></i>
 									</a>
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
 									<a href="#timeslot">
-									<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 3</button></i>
+									<button type="submit" id="workstation13" value="workstation3" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); $('#testinput').val(this.value);">PC 3</button></i>
 									</a>
 									<i class="glyphicon glyphicon-hdd" style="font-size:2em">
 									<a href="#timeslot">
-										<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 4</button></i>
+										<button type="submit" id="workstation14" value="workstation4" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); $('#testinput').val(this.value);">PC 4</button></i>
 									</a>
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
 									<a href="#timeslot">
-									<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 5</button></i>
+									<button type="submit" id="workstation15" value="workstation5" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); $('#testinput').val(this.value);">PC 5</button></i>
 									</a>
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
 									<a href="#timeslot">
-									<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 6</button></i>
+									<button type="submit" id="workstation16" value="workstation6" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); $('#testinput').val(this.value);">PC 6</button></i>
 									</a>
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
 									<a href="#timeslot">
-									<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 7</button></i>
+									<button type="submit" id="workstation17" value="workstation7" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); $('#testinput').val(this.value);">PC 7</button></i>
 									</a>
-							<i class="glyphicon glyphicon-hdd" style="font-size:2em">
-								<a href="#timeslot">
-								<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 8</button></i>
-								</a>
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
 									<a href="#timeslot">
-									<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 9</button></i>
+									<button type="submit" id="workstation18" value="workstation8" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); $('#testinput').val(this.value);">PC 8</button></i>
 									</a>
-
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
 									<a href="#timeslot">
-									<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); ">PC 10</button></i>
+									<button type="submit" id="workstation19" value="workstation9" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); $('#testinput').val(this.value);">PC 9</button></i>
+									</a>
+								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
+									<a href="#timeslot">
+									<button type="submit" id="workstation20" value="workstation10" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); $('#testinput').val(this.value);">PC 10</button></i>
 									</a>
 						</div>
 					</div>
+					</form>
 					
 					
 					
-					
-						</div>
-                        <p class="intro-text" hidden>Grayscale is a premium quality, free Bootstrap 3 theme</p>								
+						</div>					
                     </div>
                 </div>
             </div>
@@ -245,6 +244,7 @@
                             <div class = "panel panel-default">
                            
                                 <div class = "panel-body">
+								<form id="timeScheduleForm" name="timeScheduleForm" action="/picktime" method="post">
                                     <div class = "page-header">	
                                         <h3><font color="black">Pick Your Timeslot</font></h3>
                                     </div>
@@ -261,24 +261,24 @@
 												<center>Times</center>
 											</th>
 											<tr>
-												<td><button type="button" class="btn btn-success btn-md">8:00am-9:00am</button></td>
-												<td><button type="button" class="btn btn-success">9:00am-10:00am</button></td>
-												<td><button type="button" class="btn btn-danger">11:00am-12:00pm</button></td>
+												<td><button type="submit" id="timebutton0" value="8amto9am" class="btn btn-success btn-md">8:00am-9:00am</button></td>
+												<td><button type="submit" id="timebutton1" value="9amto10am" class="btn btn-success">9:00am-10:00am</button></td>
+												<td><button type="submit" id="timebutton2" value="11amto12pm" class="btn btn-danger">11:00am-12:00pm</button></td>
 											</tr>
 											<tr>
-												<td><button type="button" class="btn btn-success btn-md">4:00pm-5:00pm</button></td>
-												<td><button type="button" class="btn btn-danger">5:00pm-6:00pm</button></td>
-												<td><button type="button" class="btn btn-success btn-md">6:00pm-7:00pm</button></td>
+												<td><button type="submit" id="timebutton3" value="4pmto5pm" class="btn btn-success btn-md">4:00pm-5:00pm</button></td>
+												<td><button type="submit" id="timebutton4" value="5pmto6pm" class="btn btn-danger">5:00pm-6:00pm</button></td>
+												<td><button type="submit" id="timebutton5" value="6pmto7pm" class="btn btn-success btn-md">6:00pm-7:00pm</button></td>
 											</tr>
 											<tr>
-												<td><button type="button" class="btn btn-success btn-md">10:00pm-11:00pm</button></td>
-												<td><button type="button" class="btn btn-success btn-md">11:00pm-12:00am</button></td>
-												<td><button type="button" class="btn btn-success btn-md">12:00am-1:00am</button></td>
+												<td><button type="submit" id="timebutton6" value="10pmto11pm" class="btn btn-success btn-md">10:00pm-11:00pm</button></td>
+												<td><button type="submit" id="timebutton7" value="11pmto12pm" class="btn btn-success btn-md">11:00pm-12:00am</button></td>
+												<td><button type="submit" id="timebutton8" value="12amto1am" class="btn btn-success btn-md">12:00am-1:00am</button></td>
 											</tr>
 											<tr>
-												<td><button type="button" class="btn btn-success btn-md">4:00am-5:00am</button></td>
-												<td><button type="button" class="btn btn-danger">5:00am-6:00am</button></td>
-												<td><button type="button" class="btn btn-success btn-md">6:00am-7:00am</button></td>
+												<td><button type="submit" id="timebutton9" value="4amto5am" class="btn btn-success btn-md">4:00am-5:00am</button></td>
+												<td><button type="submit" id="timebutton10" value="5amto6am" class="btn btn-danger">5:00am-6:00am</button></td>
+												<td><button type="submit" id="timebutton11" value="6amto7am" class="btn btn-success btn-md">6:00am-7:00am</button></td>
 											</tr>
 										</table>
 									</div>
@@ -289,23 +289,24 @@
 												<center>Times</center>
 											</th>
 											<tr>
-												<td><button type="button" class="btn btn-success btn-md">8:00am-9:00am</button></td>
+												<td><button type="submit" id="timebutton12" value="8amto9am" class="btn btn-success btn-md">8:00am-9:00am</button></td>
 											</tr>
 											<tr>
-												<td><button type="button" class="btn btn-success btn-md">4:00pm-5:00pm</button></td>
+												<td><button type="submit" id="timebutton13" value="4pmto5pm" class="btn btn-success btn-md">4:00pm-5:00pm</button></td>
 											</tr>
 											<tr>
-												<td><button type="button" class="btn btn-success btn-md">10:00pm-11:00pm</button></td>
+												<td><button type="submit" id="timebutton14" value="10pmto11pm" class="btn btn-success btn-md">10:00pm-11:00pm</button></td>
 											</tr>
 											<tr>
-												<td><button type="button" class="btn btn-success btn-md">4:00am-5:00am</button></td>
+												<td><button type="submit" id="timebutton15" value="4amto5am" class="btn btn-success btn-md">4:00am-5:00am</button></td>
 											</tr>
 										</table>
 									</div>
 									</font></p>
 									<a href="#download">
 										<button type="button" class="btn btn-default btn-md" onclick="$('#download').removeClass('hidden').addClass('visible'); ">Select Time</button></td>
-										</a>									
+										</a>
+								</form>
 									<!-- Old info goes here --> 
                                 </div>
                             </div>
@@ -324,6 +325,7 @@
 									<div class="table-responsive">
                                     </div>
 									<p> <font color="black">Please use the dropdown below to choose the date you would like to check your reservations for
+									<form id="myreservations" name="myreservations" action="/myreservations" method="post">
 										<div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
 											<input type="text" class="form-control col-lg-12 col-md-12 col-sm-12 col-xs-12" placeholder="Example Date: 1/31/2014 11:00:00" style="text-align:center"></input>
 										</div>
@@ -333,20 +335,21 @@
 												<center>Times</center>
 											</th>
 											<tr>
-												<td><button type="button" class="btn btn-success btn-md">8:00am-9:00am</button><i class="glyphicon glyphicon-remove" style="color:red; font-size:1.5em; padding:5px"></i></td>
-												<td><button type="button" class="btn btn-success btn-md">3:00pm-4:00pm</button><i class="glyphicon glyphicon-remove" style="color:red; font-size:1.5em; padding:5px"></i></td>
+												<td><button type="submit" class="btn btn-success btn-md">8:00am-9:00am</button><input type="image" src="img/imageX.jpg" id="reservationbutton1" value="reservecancel1"></input></td>
+												<td><button type="submit" class="btn btn-success btn-md">3:00pm-4:00pm</button><input type="image" src="img/imageX.jpg" id="reservationbutton2" value="reservecancel2"></i></td>
 												
 											</tr>
 											<tr>
-												<td><button type="button" class="btn btn-success btn-md">4:00pm-5:00pm</button><i class="glyphicon glyphicon-remove" style="color:red; font-size:1.5em; padding:5px"></i></td>
-												<td><button type="button" class="btn btn-success btn-md">9:00pm-10:00pm</button><i class="glyphicon glyphicon-remove" style="color:red; font-size:1.5em; padding:5px"></i></td>
+												<td><button type="submit" class="btn btn-success btn-md">4:00pm-5:00pm</button><input type="image" src="img/imageX.jpg" id="reservationbutton3" value="reservecancel3"></i></td>
+												<td><button type="submit" class="btn btn-success btn-md">9:00pm-10:00pm</button><input type="image" src="img/imageX.jpg" id="reservationbutton4" value="reservecancel4"></i></td>
 											</tr>
 											<tr>
-												<td><button type="button" class="btn btn-success btn-md">10:00pm-11:00pm</button><i class="glyphicon glyphicon-remove" style="color:red; font-size:1.5em; padding:5px"></i></td>
-												<td><button type="button" class="btn btn-success btn-md">11:00pm-12:00am</button><i class="glyphicon glyphicon-remove" style="color:red; font-size:1.5em; padding:5px"></i></td>
+												<td><button type="submit" class="btn btn-success btn-md">10:00pm-11:00pm</button><input type="image" src="img/imageX.jpg" id="reservationbutton5" value="reservecancel5"></i></td>
+												<td><button type="submit" class="btn btn-success btn-md">11:00pm-12:00am</button><input type="image" src="img/imageX.jpg" id="reservationbutton6" value="reservecancel6"></i></td>
 											</tr>
 										</table>
 									</div>
+									</form>
 									</font></p>                                   
                                 </div>
                             </div>
@@ -369,18 +372,25 @@
  						</div>
  				</div>
                      <p></p>
-                     <a onclick="$(alert('You have Successfully Reserved a Time Slot!'))" class="btn btn-default btn-lg">Reserve</a>
+					 <form id="reserve" name="reserve" action="/finalizereservation" method="post">
+                     <button type="submit" id="reservebutton" value="reserve1" onclick="$(alert('You have Successfully Reserved a Time Slot!'))" class="btn btn-default btn-lg">Reserve</button>
+					 </form>
                  </div>
              </div>
          </div>
      </section>
 
+	 
 	<section id="about" class="container content-section text-center">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
- 					<textarea rows="6" class="form-control col-lg-12 col-md-12 col-sm-12 col-xs-12" placeholder="Placeholder for about section" maxlength=500></textarea>
- 				</div>
+            <div class="col-lg-8 col-lg-offset-2" style="color:white">
+                <h2>About this webpage</h2>
+                <p>Our team of eight created this webpage using Express, AJAX, bootstrap, and nodeJS over the course of a couple weeks.</p>
+                <p>We had three on the backend working with NodeJS, three on the frontend working with ajax and bootstrap, and two working on documentation.</p>
+                <p>The following people were assigned to each team:</p>
+				<p>Frontend team: Dumar Canas, Brian Ferry, Nebil Sherif</p>
+				<p>Backend team: Steven Pettit, Kevin Silliman, Yu Chen</p>
+				<p>Documentation: Josette Seitz, David Duran</p>
             </div>
         </div>
     </section>
