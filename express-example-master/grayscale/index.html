@@ -10,7 +10,7 @@
     <title>Charlotte Lab</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Fonts -->
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -46,27 +46,27 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="hidden-xs">
 				<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-					<ul class="nav navbar-nav" style="font-size:0.75em">
+					<ul class="nav navbar-nav">
 						<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
 						<li class="hidden">
 							<a href="#page-top"></a>
 						</li>
-						<li class="page-scroll" style="font-size:1em; text-align:left">
-								<a href="#reservation" onclick="$('#reservation').removeClass('hidden').addClass('visible');"><center><i class="glyphicon glyphicon-calendar"></i></center>My Reservations</a>
+						<li class="page-scroll" style="text-align:left">
+								<a href="#reservation" onclick="$('#reservation').removeClass('hidden').addClass('visible');"><center><i class="glyphicon glyphicon-th-list"></i></center>My Reservations</a>
 						</li>
-						<li class="page-scroll" style="font-size:1em; text-align:left">
+						<li class="page-scroll" style="text-align:left">
 							<a href="#about"><center><i class="glyphicon glyphicon-info-sign"></i></center>About</a>
 						</li>
-						<li class="page-scroll" style="font-size:1em; text-align:left">
-							<a href="#contact"><center><i class="glyphicon glyphicon-envelope"></i></center>Contact Us</a>
+						<li class="page-scroll" style="text-align:left">
+							<a href="#contact"><center><i class="glyphicon glyphicon-envelope"></i></center>Feedback</a>
 						</li>
-						<li class="page-scroll" style="font-size:1em; text-align:left">
+						<li class="page-scroll" style="text-align:left">
 						<a href="#contact"><center><i class="glyphicon glyphicon-log-out"></i></center>Logout</a>
 						</li>
 					</ul>
 					<form class="navbar-form navbar-left" role="search">
 						<div class="form-group">
-						<input type="text" class="form-control" placeholder="Search" style="text-align:center; float:right">
+						<input type="text" class="form-control" placeholder="Search">
 						</div>
 				  </form>
 				</div>
@@ -112,37 +112,37 @@
 					<h3>Pick Your Workstation To Reserve</h3>
             </div>
                 <div class="row">
-                        <!--<h1 class="brand-heading">L A B</h1>-->
+                        <input type="text" id="testinput" placeholder="text" value="test"></input>
 					<div class="btn-group page-scroll visible-lg visible-md">
 						<div class="col-md-12 col-md-offset-0" style="padding-bottom:50px">	
 							<div class="col-md-2 col-md-offset-1">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
 										<a href="#timeslot">
-										<button type="button" id="workstation1" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 1</button></i>
+										<button type="button" id="workstation" value="workstation1" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); $('#testinput').val('Workstation1');">PC 1</button></i>
 										</a>
 							</div>
 							<div class="col-md-2">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
 									<a href="#timeslot">
-									<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 2</button></i>
+									<button type="button" id="workstation2" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); $('#testinput').val('workstation2');">PC 2</button></i>
 									</a>
 							</div>
 							<div class="col-md-2">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
 									<a href="#timeslot">
-									<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 3</button></i>
+									<button type="button" id="workstation3" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); $('#testinput').val('workstation3');">PC 3</button></i>
 									</a>
 							</div>
 							<div class="col-md-2">
 									<i class="glyphicon glyphicon-hdd" style="font-size:2em">
 									<a href="#timeslot">
-										<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 4</button></i>
+										<button type="button" id="workstation4" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 4</button></i>
 									</a>
 							</div>
 							<div class="col-md-2">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
 									<a href="#timeslot">
-									<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 5</button></i>
+									<button type="button" id="workstation5" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 5</button></i>
 									</a>
 							</div>
 						</div>
@@ -150,31 +150,31 @@
 							<div class="col-md-2 col-md-offset-1">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
 									<a href="#timeslot">
-									<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 6</button></i>
+									<button type="button" id="workstation6" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 6</button></i>
 									</a>
 							</div>
 							<div class="col-md-2">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
 									<a href="#timeslot">
-									<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 7</button></i>
+									<button type="button" id="workstation7" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 7</button></i>
 									</a>
 							</div>
 							<div class="col-md-2">
 							<i class="glyphicon glyphicon-hdd" style="font-size:2em">
 								<a href="#timeslot">
-								<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 8</button></i>
+								<button type="button" id="workstation8" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 8</button></i>
 								</a>
 							</div>
 							<div class="col-md-2">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
 									<a href="#timeslot">
-									<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 9</button></i>
+									<button type="button" id="workstation9" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible');">PC 9</button></i>
 									</a>
 							</div>
 							<div class="col-md-2">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
 									<a href="#timeslot">
-									<button type="button" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); ">PC 10</button></i>
+									<button type="button" id="workstation10" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); ">PC 10</button></i>
 									</a>
 							</div>
 						</div>
