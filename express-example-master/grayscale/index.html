@@ -65,9 +65,9 @@
 						</li>
 					</ul>
 					<form class="navbar-form navbar-left" role="search">
-					<div class="form-group">
-					  <input type="text" class="form-control" placeholder="Search" style="text-align:center">
-					</div>
+						<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search" style="text-align:center; float:right">
+						</div>
 				  </form>
 				</div>
 			</div>
@@ -241,35 +241,19 @@
     <section id="timeslot" class="container content-section text-center hidden">
 		<div class = "container">
                      <div class = "row">                  
-                        <div class = "col-lg-12 col-xs-12 col-sm-12 col-md-12  page-scroll">
+                        <div class = "col-lg-12 col-xs-12 col-sm-12 col-md-12 page-scroll">
                             <div class = "panel panel-default">
                            
                                 <div class = "panel-body">
                                     <div class = "page-header">	
                                         <h3><font color="black">Pick Your Timeslot</font></h3>
                                     </div>
-									<p> <font color="black">Please use the dropdown below to choose the date you would like to reserve your workstation.
-									<div class="table table-hover table-border">
-										<table class="table">
-											<th>
-												<center>Date</center>
-											</th>
-											<tr>
-												<td>
-													<div class="btn-group">
-														<button class="btn btn-default btn-md dropdown-toggle" type="button" data-toggle="dropdown">
-															Choose A Date... <span class="caret"></span>
-														</button>
-														<ul class="dropdown-menu">
-															<li>4/10/2014</li>
-															<li>4/11/2014</li>
-															<li>4/12/2014</li>
-														</ul>
-													</div>
-												</td>
-											</tr>
-										</table>
-									</div>
+									<p> <font color="black">Please use the dropdown below to choose the date you would like to reserve your workstation.									
+										<div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+											<input type="text" class="form-control col-lg-12 col-md-12 col-sm-12 col-xs-12" placeholder="Example Date: 1/31/2014 11:00:00" style="text-align:center"></input>
+										</div>
+									
+									
 									<div class="table-responsive hidden-xs">
 										<table class="table table-hover table-striped">
 											<h4><caption>Available Times</caption></h4>
@@ -317,11 +301,11 @@
 												<td><button type="button" class="btn btn-success btn-md">4:00am-5:00am</button></td>
 											</tr>
 										</table>
-										<a href="#download">
-										<button type="button" class="btn btn-default btn-md" onclick="$('#download').removeClass('hidden').addClass('visible'); ">Select Time</button></td>
-										</a>
 									</div>
-									</font></p> 
+									</font></p>
+									<a href="#download">
+										<button type="button" class="btn btn-default btn-md" onclick="$('#download').removeClass('hidden').addClass('visible'); ">Select Time</button></td>
+										</a>									
 									<!-- Old info goes here --> 
                                 </div>
                             </div>
@@ -340,27 +324,9 @@
 									<div class="table-responsive">
                                     </div>
 									<p> <font color="black">Please use the dropdown below to choose the date you would like to check your reservations for
-									<div class="table table-hover table-border">
-										<table class="table">
-											<th>
-												<center>Date</center>
-											</th>
-											<tr>
-												<td>
-													<div class="btn-group">
-														<button class="btn btn-default btn-md dropdown-toggle" type="button" data-toggle="dropdown">
-															Choose A Date... <span class="caret"></span>
-														</button>
-														<ul class="dropdown-menu">
-															<li>4/10/2014</li>
-															<li>4/11/2014</li>
-															<li>4/12/2014</li>
-														</ul>
-													</div>
-												</td>
-											</tr>
-										</table>
-									</div>
+										<div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+											<input type="text" class="form-control col-lg-12 col-md-12 col-sm-12 col-xs-12" placeholder="Example Date: 1/31/2014 11:00:00" style="text-align:center"></input>
+										</div>
 										<table class="table table-hover table-striped">
 											<h4><caption>Your Reserved Times</caption></h4>
 											<th colspan=6>
@@ -398,8 +364,8 @@
  						<div class="panel-heading">Please Enter Your Statement of Purpose</div>
  
  						<!-- Table -->
- 						<div class="input-group col-lg-12">
- 							<textarea rows="6" class="form-control col-lg-12" placeholder="" maxlength=500></textarea>
+ 						<div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+ 							<textarea rows="6" class="form-control col-lg-12 col-md-12 col-sm-12 col-xs-12" placeholder="" style="width:100%;"></textarea>
  						</div>
  				</div>
                      <p></p>
@@ -412,8 +378,8 @@
 	<section id="about" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <div class="input-group col-lg-12">
- 					<textarea rows="6" class="form-control col-lg-12" placeholder="Placeholder for about section" maxlength=500></textarea>
+                <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+ 					<textarea rows="6" class="form-control col-lg-12 col-md-12 col-sm-12 col-xs-12" placeholder="Placeholder for about section" maxlength=500></textarea>
  				</div>
             </div>
         </div>
