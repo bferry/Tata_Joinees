@@ -57,14 +57,14 @@
 						<li class="page-scroll" style="text-align:left">
 							<a href="#about"><center><i class="glyphicon glyphicon-info-sign"></i></center>About</a>
 						</li>
-						<li class="page-scroll" style="text-align:left">
+						<li id="feedback" class="page-scroll hidden" style="text-align:left">
 								<!-- Button trigger modal -->
 							
 							<a data-toggle="modal" data-target="#myModal"><center><i class="glyphicon glyphicon-envelope"></i></center>Feedback</a>
 			
 						</li>
 						<li id="logoutButton" class="page-scroll hidden" style="text-align:left">
-						<a href="#contact" onclick= "$('#logoutButton').removeClass('visible').addClass('hidden'); $('#searchFieldMobile').removeClass('visible').addClass('hidden');$('#searchFieldDesktop').removeClass('visible').addClass('hidden');$('#logoutButtonMobile').removeClass('visible').addClass('hidden');$('#mobileReservationButton').removeClass('visible').addClass('hidden');$('#desktopReservationButton').removeClass('visible').addClass('hidden'); $('#wholepage').removeClass('visible').addClass('hidden'); $('#loginForm').removeClass('hidden').addClass('visible'); "><center><i class="glyphicon glyphicon-log-out"></i></center>Logout</a>
+						<a href="#contact" onclick= "$('#feedback').removeClass('visible').addClass('hidden'); $('#feedbackMobile').removeClass('visible').addClass('hidden'); $('#logoutButton').removeClass('visible').addClass('hidden'); $('#searchFieldMobile').removeClass('visible').addClass('hidden');$('#searchFieldDesktop').removeClass('visible').addClass('hidden');$('#logoutButtonMobile').removeClass('visible').addClass('hidden');$('#mobileReservationButton').removeClass('visible').addClass('hidden');$('#desktopReservationButton').removeClass('visible').addClass('hidden'); $('#wholepage').removeClass('visible').addClass('hidden'); $('#loginForm').removeClass('hidden').addClass('visible'); $('#loginContent').removeClass('hidden').addClass('visible'); "><center><i class="glyphicon glyphicon-log-out"></i></center>Logout</a>
 						</li>
 					</ul>
 					<form class="navbar-form navbar-left" role="search">
@@ -88,11 +88,11 @@
 						<li class="page-scroll" style="font-size:1em; text-align:left">
 							<a href="#about"><center><i class="glyphicon glyphicon-info-sign" style="float:right"></i></center>About</a>
 						</li>
-						<li class="page-scroll" style="font-size:1em; text-align:left">
+						<li id="feedbackMobile" class="page-scroll hidden" style="font-size:1em; text-align:left">
 							<a data-toggle="modal" data-target="#myModal"><center><i class="glyphicon glyphicon-envelope" style="float:right"></i></center>Feedback</a>
 						</li>
 						<li id="logoutButtonMobile" class="page-scroll hidden" style="font-size:1em; text-align:left">
-						<a href="#contact" onclick= "$('#searchFieldDesktop').removeClass('visible').addClass('hidden');$('#searchFieldMobile').removeClass('visible').addClass('hidden');$('#logoutButton').removeClass('visible').addClass('hidden');$('#logoutButtonMobile').removeClass('visible').addClass('hidden');$('#mobileReservationButton').removeClass('visible').addClass('hidden');$('#desktopReservationButton').removeClass('visible').addClass('hidden'); $('#wholepage').removeClass('visible').addClass('hidden'); $('#loginForm').removeClass('hidden').addClass('visible'); "><center><i class="glyphicon glyphicon-log-out" style="float:right"></i></center>Logout</a>
+						<a href="#contact" onclick= "$('#feedback').removeClass('visible').addClass('hidden'); $('#feedbackMobile').removeClass('visible').addClass('hidden'); $('#loginContent').removeClass('hidden').addClass('visible'); $('#searchFieldDesktop').removeClass('visible').addClass('hidden');$('#searchFieldMobile').removeClass('visible').addClass('hidden');$('#logoutButton').removeClass('visible').addClass('hidden');$('#logoutButtonMobile').removeClass('visible').addClass('hidden');$('#mobileReservationButton').removeClass('visible').addClass('hidden');$('#desktopReservationButton').removeClass('visible').addClass('hidden'); $('#wholepage').removeClass('visible').addClass('hidden'); $('#loginForm').removeClass('hidden').addClass('visible'); "><center><i class="glyphicon glyphicon-log-out" style="float:right"></i></center>Logout</a>
 						</li>
 					</ul>
 					<form class="navbar-form navbar-left" role="search">
@@ -109,27 +109,91 @@
     </nav>
 
 	 <section id="loginContent" class="content-section text-center">
-
-		 <div id="loginForm" class="container">
-			<div class="col-md-4 col-md-offset-4">
-				<div class="panel panel-default">
-					<div class="panel-heading"><h3 class="panel-title"><strong>Sign in </strong></h3></div>
-			<div class="panel-body">
-				<form role="form">
-					<div class="form-group">
-						<label for="exampleInputEmail1">Username or Email</label>
-						<input type="email" class="form-control" style="border-radius:0px" id="exampleInputEmail1" placeholder="Enter email">
-					</div>
-					<div class="form-group">
-						<label for="exampleInputPassword1">Password </label>
-						<input type="password" class="form-control" style="border-radius:0px" id="exampleInputPassword1" placeholder="Password">
-					</div>
-				<button type="submit" class="btn btn-sm btn-default" onclick="$('#searchFieldDesktop').removeClass('hidden').addClass('visible');$('#searchFieldMobile').removeClass('hidden').addClass('visible');$('#mobileReservationButton').removeClass('hidden').addClass('visible');$('#desktopReservationButton').removeClass('hidden').addClass('visible'); $('#wholepage').removeClass('hidden').addClass('visible'); $('#loginForm').addClass('hidden'); $('#logoutButton').removeClass('hidden').addClass('visible');$('#logoutButtonMobile').removeClass('hidden').addClass('visible');" ;>Sign in</button>
-				</form>
-			</div>
-			</div>
-			</div>
-		</div>
+       
+        <div id="loginForm" class="container">
+            <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="" id="loginModal">
+                <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3>Welcome To The TCS Lab Reservation System</h3>
+              </div>
+              <div class="modal-body">
+                <div class="well">
+                  <ul class="nav nav-tabs">
+                    <li class="active"><a href="#login" data-toggle="tab">Login</a></li>
+                    <li><a href="#create" data-toggle="tab">Create Account</a></li>
+                  </ul>
+                  <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane active in" id="login" style="color:black">
+                      <!-- <form class="form-horizontal" action='' method="POST"> --> 
+                        <fieldset>
+                          <div id="legend">
+                            <legend class="">Login</legend>
+                          </div>    
+                          <div class="control-group">
+                            <!-- Username -->
+                            <label class="control-label"  for="username">Username</label>
+                            <div class="controls">
+                              <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
+                            </div>
+                          </div>
+     
+                          <div class="control-group">
+                            <!-- Password-->
+                            <label class="control-label" for="password">Password</label>
+                            <div class="controls">
+                              <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+                            </div>
+                          </div>
+     
+     
+                          <div class="control-group">
+                            <!-- Button -->
+                            <div class="controls">
+                              <button class="btn btn-success" onclick="$('#searchFieldDesktop').removeClass('hidden').addClass('visible'); $('#feedback').removeClass('hidden').addClass('visible'); $('#feedbackMobile').removeClass('hidden').addClass('visible'); $('#searchFieldMobile').removeClass('hidden').addClass('visible');$('#mobileReservationButton').removeClass('hidden').addClass('visible');$('#desktopReservationButton').removeClass('hidden').addClass('visible'); $('#wholepage').removeClass('hidden').addClass('visible'); $('#loginContent').addClass('hidden'); $('#logoutButton').removeClass('hidden').addClass('visible');$('#logoutButtonMobile').removeClass('hidden').addClass('visible');">Login</button>
+                            </div>
+                          </div>
+                        </fieldset>
+                      <!-- </form> -->                
+                    </div>
+                    <div class="tab-pane fade" id="create" style="color:black;">
+                      <!-- <form id="tab"> -->
+                      <center>
+                        <table>
+                        <tr>
+                            <td><label>Employee ID: </label></td>
+                            <td><input type="text" value=""></td>
+                        </tr>
+                        <tr>
+                            <td><label>First Name: </label></td>
+                            <td><input type="text" value=""></td>
+                        </tr>
+                        <tr>
+                            <td><label>Last Name: </label></td>
+                            <td><input type="text" value=""></td>
+                        </tr>
+                        <tr>
+                            <td><label>Email: </label></td>
+                            <td><input type="text" value=""></td>
+                        </tr>
+                        </table>
+                        </center>
+                            <div>
+                              <button class="btn btn-primary">Create Account</button>
+                            </div>
+                     
+                      <!-- </form> --> 
+                    </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
 	</section>
 <div id="wholepage" class="hidden">
     <section class="intro">
@@ -140,19 +204,19 @@
             </div>
                 <div class="row">
                 <input type="hidden" id="testinput" placeholder="text" value="test"></input>
-				<form id="workstationform" name="workstationform" action="/pickworkstation" method="post">
+				<!-- <form id="workstationform" name="workstationform" action="/pickworkstation" method="post"> --> 
 					<div class="btn-group page-scroll visible-lg visible-md">
 						<div class="col-md-12 col-md-offset-0" style="padding-bottom:50px">	
 							<div class="col-md-2 col-md-offset-1">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
 										<a href="#timeslot">
-										<button type="submit" id="workstation1" value="workstation1" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); $('#testinput').val(this.value);">PC 5</button></i>
+										<button type="submit" id="workstation1" value="workstation1" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); $('#allButWorkstation').removeClass('hidden').addClass('visible'); $('#testinput').val(this.value);">PC 5</button></i>
 										</a>
 							</div>
 							<div class="col-md-2">
 								<i class="glyphicon glyphicon-hdd" style="font-size:2em">
 									<a href="#timeslot">
-									<button type="submit" id="workstation2" value="workstation2" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); $('#testinput').val(this.value);">PC 6</button></i>
+									<button type="submit" id="workstation2" value="workstation2" class="btn btn-default btn-md" onclick="$('#timeslot').removeClass('hidden').addClass('visible'); $('#allButWorkstation').removeClass('hidden').addClass('visible'); $('#testinput').val(this.value);">PC 6</button></i>
 									</a>
 							</div>
 							<div class="col-md-2">
@@ -253,12 +317,14 @@
 									</a>
 						</div>
 					</div>
-					</form>
+					<!-- </form> -->
 						</div>					
                     </div>
                 </div>
             </div>
     </section>
+    
+<div id="allButWorkstation" class="hidden">
     <section id="timeslot" class="container content-section text-center hidden">
 		<div class = "container">
                      <div class = "row">                  
@@ -273,62 +339,83 @@
 									<p> <font color="black">Please use the dropdown below to choose the date you would like to reserve your workstation.									
 										<!-- <form action="demo_form.asp"> --> 
 										  <input type="date" name="bday">
-										  <input type="submit" onclick="$('#timetable123').removeClass('hidden').addClass('visible'); $('#timetable1235').removeClass('hidden').addClass('visible'); $('#submitbutton123').removeClass('hidden').addClass('visible');">
+										  <input type="submit" onclick="$('#timeScheduleDesktop').removeClass('hidden').addClass('visible'); $('#timeScheduleMobile').removeClass('hidden').addClass('visible'); $('#submitReservationButton').removeClass('hidden').addClass('visible');">
 										<!-- </form> --> 
 									
 									<form id="timeScheduleForm" name="timeScheduleForm" action="/picktime" method="post">
 										<div class="table-responsive hidden-xs">
-										<table id="timetable123" class="table table-hover table-striped hidden">
+										<table id="timeScheduleDesktop" class="table table-hover table-striped hidden">
 											<h4><caption>Available Times</caption></h4>
 											<th colspan=6>
 												<center>Times</center>
 											</th>
 											<tr>
-												<td><button type="submit" id="timebutton0" value="8amto9am" class="btn btn-success btn-md">8:00am-9:00am</button></td>
-												<td><button type="submit" id="timebutton1" value="9amto10am" class="btn btn-success">9:00am-10:00am</button></td>
-												<td><button type="submit" id="timebutton2" value="11amto12pm" class="btn btn-danger">11:00am-12:00pm</button></td>
+												<td><button type="submit" id="timebutton0" value="8amto9am" class="btn btn-success btn-md">08:00am-09:00am</button></td>
+												<td><button type="submit" id="timebutton1" value="9amto10am" class="btn btn-success">09:00am-10:00am</button></td>
+												<td><button type="submit" id="timebutton2" value="11amto12pm" class="btn btn-danger">10:00am-11:00am</button></td>
 											</tr>
 											<tr>
-												<td><button type="submit" id="timebutton3" value="4pmto5pm" class="btn btn-success btn-md">4:00pm-5:00pm</button></td>
-												<td><button type="submit" id="timebutton4" value="5pmto6pm" class="btn btn-danger">5:00pm-6:00pm</button></td>
-												<td><button type="submit" id="timebutton5" value="6pmto7pm" class="btn btn-success btn-md">6:00pm-7:00pm</button></td>
+												<td><button type="submit" id="timebutton3" value="4pmto5pm" class="btn btn-success btn-md">11:00am-12:00pm</button></td>
+												<td><button type="submit" id="timebutton4" value="5pmto6pm" class="btn btn-danger">12:00pm-01:00pm</button></td>
+												<td><button type="submit" id="timebutton5" value="6pmto7pm" class="btn btn-success btn-md">01:00pm-02:00pm</button></td>
 											</tr>
 											<tr>
-												<td><button type="submit" id="timebutton6" value="10pmto11pm" class="btn btn-success btn-md">10:00pm-11:00pm</button></td>
-												<td><button type="submit" id="timebutton7" value="11pmto12pm" class="btn btn-success btn-md">11:00pm-12:00am</button></td>
-												<td><button type="submit" id="timebutton8" value="12amto1am" class="btn btn-success btn-md">12:00am-1:00am</button></td>
+												<td><button type="submit" id="timebutton6" value="10pmto11pm" class="btn btn-success btn-md">02:00pm-03:00pm</button></td>
+												<td><button type="submit" id="timebutton7" value="11pmto12pm" class="btn btn-success btn-md">03:00pm-04:00pm</button></td>
+												<td><button type="submit" id="timebutton8" value="12amto1am" class="btn btn-success btn-md">04:00pm-05:00pm</button></td>
 											</tr>
 											<tr>
-												<td><button type="submit" id="timebutton9" value="4amto5am" class="btn btn-success btn-md">4:00am-5:00am</button></td>
-												<td><button type="submit" id="timebutton10" value="5amto6am" class="btn btn-danger">5:00am-6:00am</button></td>
-												<td><button type="submit" id="timebutton11" value="6amto7am" class="btn btn-success btn-md">6:00am-7:00am</button></td>
+												<td><button type="submit" id="timebutton9" value="4amto5am" class="btn btn-success btn-md" style="display:none" ></button></td>
+												<td><button type="submit" id="timebutton10" value="5amto6am" class="btn btn-danger">05:00pm-06:00pm</button></td>
+												<td><button type="submit" id="timebutton11" value="6amto7am" class="btn btn-success btn-md" style="display:none" ></button></td>
 											</tr>
 										</table>
 									</div>							
 
 									<div class="table-responsive visible-xs">
-										<table id="timetable1235" class="table table-hover table-striped hidden">
+										<table id="timeScheduleMobile" class="table table-hover table-striped hidden">
 											<h4><caption>Available Times</caption></h4>
 											<th colspan=1>
 												<center>Times</center>
 											</th>
 											<tr>
-												<td><button type="submit" id="timebutton12" value="8amto9am" class="btn btn-success btn-md">8:00am-9:00am</button></td>
+												<td><button type="submit" id="timebutton0" value="8amto9am" class="btn btn-success btn-md">08:00am-09:00am</button></td>
 											</tr>
 											<tr>
-												<td><button type="submit" id="timebutton13" value="4pmto5pm" class="btn btn-success btn-md">4:00pm-5:00pm</button></td>
+                                                <td><button type="submit" id="timebutton1" value="9amto10am" class="btn btn-success">09:00am-10:00am</button></td>
+											</tr>
+											<tr>	
+                                                <td><button type="submit" id="timebutton2" value="11amto12pm" class="btn btn-danger">10:00am-11:00am</button></td>
 											</tr>
 											<tr>
-												<td><button type="submit" id="timebutton14" value="10pmto11pm" class="btn btn-success btn-md">10:00pm-11:00pm</button></td>
+												<td><button type="submit" id="timebutton3" value="4pmto5pm" class="btn btn-success btn-md">11:00am-12:00pm</button></td>
+											</tr>
+											<tr>	
+                                                <td><button type="submit" id="timebutton4" value="5pmto6pm" class="btn btn-danger">12:00pm-01:00pm</button></td>
+											</tr>
+											<tr>	
+                                                <td><button type="submit" id="timebutton5" value="6pmto7pm" class="btn btn-success btn-md">01:00pm-02:00pm</button></td>
 											</tr>
 											<tr>
-												<td><button type="submit" id="timebutton15" value="4amto5am" class="btn btn-success btn-md">4:00am-5:00am</button></td>
+												<td><button type="submit" id="timebutton6" value="10pmto11pm" class="btn btn-success btn-md">02:00pm-03:00pm</button></td>
+											</tr>
+											<tr>	
+                                                <td><button type="submit" id="timebutton7" value="11pmto12pm" class="btn btn-success btn-md">03:00pm-04:00pm</button></td>
+											</tr>
+											<tr>	
+                                                <td><button type="submit" id="timebutton8" value="12amto1am" class="btn btn-success btn-md">04:00pm-05:00pm</button></td>
+											</tr>
+											<tr>	
+                                                <td><button type="submit" id="timebutton10" value="5amto6am" class="btn btn-danger">05:00pm-06:00pm</button></td>
+											</tr>
+											<tr>	
+                                                <td><button type="submit" id="timebutton11" value="6amto7am" class="btn btn-success btn-md" style="display:none" ></button></td>
 											</tr>
 										</table>
 									</div>
 									</font></p>
 										<a href="#download">
-										<button type="button" id="submitbutton123" class="btn btn-default btn-md hidden" onclick="$('#download').removeClass('hidden').addClass('visible'); ">Select Time</button></td>
+										<button type="button" id="submitReservationButton" class="btn btn-default btn-md hidden" onclick="$('#download').removeClass('hidden').addClass('visible'); ">Select Time</button></td>
 										</a>
 									</form>
 									<!-- Old info goes here --> 
@@ -351,27 +438,52 @@
 									<p> <font color="black">Please use the dropdown below to choose the date you would like to check your reservations for
 										<!-- <form action="demo_form.asp"> --> 
 											<input type="date" name="bday">
-										  <input type="submit" onclick="$('#timeslot1234').removeClass('hidden').addClass('visible');">
+										  <input type="submit" onclick="$('#reservationTable').removeClass('hidden').addClass('visible'); $('#reservationMobileTable').removeClass('hidden').addClass('visible');">
 										<!-- </form> --> 
 										
 										<form id="myreservations" name="myreservations" action="/myreservations" method="post">
 		
-											<table id="timeslot1234" class="table table-hover table-striped hidden">
+											<table id="reservationTable" class="table table-hover table-striped hidden hidden-xs">
+												<h4><caption>Your Reserved Times</caption></h4>
+												<th colspan=6>
+													<center>Times</center>
+												</th>
+												<tr>
+													<td><button type="submit" class="btn btn-success btn-md">08:00am-09:00am</button><input type="image" src="img/imageX.jpg" id="reservationbutton1" value="reservecancel1"></input></td>
+													<td><button type="submit" class="btn btn-success btn-md">03:00pm-04:00pm</button><input type="image" src="img/imageX.jpg" id="reservationbutton2" value="reservecancel2"></i></td>
+												</tr>
+												<tr>
+													<td><button type="submit" class="btn btn-success btn-md">04:00pm-05:00pm</button><input type="image" src="img/imageX.jpg" id="reservationbutton3" value="reservecancel3"></i></td>
+													<td><button type="submit" class="btn btn-success btn-md">09:00pm-10:00pm</button><input type="image" src="img/imageX.jpg" id="reservationbutton4" value="reservecancel4"></i></td>
+												</tr>
+												<tr>
+													<td><button type="submit" class="btn btn-success btn-md">10:00pm-11:00pm</button><input type="image" src="img/imageX.jpg" id="reservationbutton5" value="reservecancel5"></i></td>
+													<td><button type="submit" class="btn btn-success btn-md">11:00pm-12:00am</button><input type="image" src="img/imageX.jpg" id="reservationbutton6" value="reservecancel6"></i></td>
+												</tr>
+											</table>
+                                            
+                                            <table id="reservationMobileTable" class="table table-hover table-striped hidden visible-xs">
 												<h4><caption>Your Reserved Times</caption></h4>
 												<th colspan=6>
 													<center>Times</center>
 												</th>
 												<tr>
 													<td><button type="submit" class="btn btn-success btn-md">8:00am-9:00am</button><input type="image" src="img/imageX.jpg" id="reservationbutton1" value="reservecancel1"></input></td>
-													<td><button type="submit" class="btn btn-success btn-md">3:00pm-4:00pm</button><input type="image" src="img/imageX.jpg" id="reservationbutton2" value="reservecancel2"></i></td>
+												</tr>
+												<tr>
+                                                    <td><button type="submit" class="btn btn-success btn-md">3:00pm-4:00pm</button><input type="image" src="img/imageX.jpg" id="reservationbutton2" value="reservecancel2"></i></td>
 												</tr>
 												<tr>
 													<td><button type="submit" class="btn btn-success btn-md">4:00pm-5:00pm</button><input type="image" src="img/imageX.jpg" id="reservationbutton3" value="reservecancel3"></i></td>
-													<td><button type="submit" class="btn btn-success btn-md">9:00pm-10:00pm</button><input type="image" src="img/imageX.jpg" id="reservationbutton4" value="reservecancel4"></i></td>
+												</tr>
+												<tr>	
+                                                    <td><button type="submit" class="btn btn-success btn-md">9:00pm-10:00pm</button><input type="image" src="img/imageX.jpg" id="reservationbutton4" value="reservecancel4"></i></td>
 												</tr>
 												<tr>
 													<td><button type="submit" class="btn btn-success btn-md">10:00pm-11:00pm</button><input type="image" src="img/imageX.jpg" id="reservationbutton5" value="reservecancel5"></i></td>
-													<td><button type="submit" class="btn btn-success btn-md">11:00pm-12:00am</button><input type="image" src="img/imageX.jpg" id="reservationbutton6" value="reservecancel6"></i></td>
+												</tr>
+												<tr>	
+                                                    <td><button type="submit" class="btn btn-success btn-md">11:00pm-12:00am</button><input type="image" src="img/imageX.jpg" id="reservationbutton6" value="reservecancel6"></i></td>
 												</tr>
 											</table>
 
@@ -398,12 +510,13 @@
  				</div>
                      <p></p>
 					 <form id="reserve" name="reserve" action="/finalizereservation" method="post">
-                     <button type="submit" id="reservebutton" value="reserve1" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal2" onclick="$('#allButWorkstation').removeClass('visible').addClass('hidden');">Reserve</button>
+                     <button type="submit" id="reservebutton" value="reserve1" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal2" onclick="$('#timeslot').removeClass('visible').addClass('hidden'); $('#timeScheduleDesktop').removeClass('visible').addClass('hidden'); $('#timeScheduleMobile').removeClass('visible').addClass('hidden'); $('#submitReservationButton').removeClass('visible').addClass('hidden'); $('#reservation').removeClass('visible').addClass('hidden'); $('#reservationTable').removeClass('visible').addClass('hidden'); $('#reservationMobileTable').removeClass('visible').addClass('hidden'); $('#download').removeClass('visible').addClass('hidden'); $('#allButWorkstation').removeClass('visible').addClass('hidden');">Reserve</button>
 					 </form>
                  </div>
              </div>
          </div>
      </section>
+  </div>
 </div>
 	 
 	<section id="about" class="container content-section text-center">
